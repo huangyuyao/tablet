@@ -79,7 +79,7 @@ html{
 
 body {
   background-color: #222;
-  color: #f8deb5;
+  color: #24201b;
 }
 
 h1 {
@@ -92,7 +92,7 @@ h1 {
 h2 {
   font-size: 1.5em;
   font-family: 'Georgia', serif;
-  color: #f8deb5;
+  color: #131211;
   text-align: center;
   text-decoration: underline;
 }
@@ -212,7 +212,6 @@ body {
 h1, h2, h3, p {
   margin: 20px 0;
 }
-
 
 
 /* Image Styles */
@@ -512,37 +511,60 @@ body {
 
 
   /* Define custom properties for light and dark themes */
-:root {
-  --color-text-light: #FFFFFF;
-  --color-text-dark: #000000;
-  --color-bg-light: #F0F0F0;
-  --color-bg-dark: #333333;
-}
-
-/* Respond to user's preference for light mode */
-@media (prefers-color-scheme: light) {
   :root {
-    --color-text: var(--color-text-dark);
-    --color-background: var(--color-bg-light);
+    --color-text-light: #FFFFFF;
+    --color-text-dark: #000000;
+    --color-bg-light: #e8f6ed;
+    --color-bg-dark: #333333;
   }
+  
+  /* Respond to user's preference for light mode */
+  @media (prefers-color-scheme: light) {
+    :root {
+      --color-text: var(--color-text-dark);
+      --color-background: var(--color-bg-light);
+    }
+    h3{
+      color:#006400;
+    }
+
+#navigation-menu {
+  background: #e8f6ed; /* Dark background for the menu */
+  color: #006400;
 }
 
-/* Respond to user's preference for dark mode */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-text: var(--color-text-light);
-    --color-background: var(--color-bg-dark);
+#navigation-menu a{
+  background: #e8f6ed; /* Dark background for the menu */
+  color: #448f44;
+}
+
+nav {
+  background: #e8f6ed; /* Dark background for the menu */
+  color: #006400;
+}
+
+nav a{
+  background: #e8f6ed; /* Dark background for the menu */
+  color: #006400;
+}
   }
-}
-
-body {
-  background-color: var(--color-background);
-  color: var(--color-text);
-}
-
+  
+  /* Respond to user's preference for dark mode */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-text: var(--color-text-light);
+      --color-background: var(--color-bg-dark);
+    }
+  }
+  
+  body {
+    background-color: var(--color-background);
+    color: var(--color-text);
+  }
+  
 
 h1, h2 {
-  color: #fff; /* Assuming you want the text white */
+  color: #222020; /* Assuming you want the text white */
   text-shadow: 0 0 10px #00E6E6, 0 0 20px #00E6E6, 0 0 30px #00E6E6, 0 0 40px #00E6E6, 0 0 50px #00E6E6, 0 0 60px #00E6E6, 0 0 70px #00E6E6;
   animation: glow 1s ease-in-out infinite alternate;
 }
